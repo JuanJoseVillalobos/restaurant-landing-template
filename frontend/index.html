@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Étoile | Restaurante Premium</title>
+    <!-- SEO Profesional: Open Graph -->
+    <meta property="og:title" content="L'Étoile | Alta Cocina Contemporánea">
+    <meta property="og:description"
+        content="Descubre la fusión perfecta entre técnica culinaria y ambiente inolvidable. Reserva ahora.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=1200&fm=webp">
+    <meta property="og:type" content="restaurant">
+    <!-- SEO Profesional: Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- SEO Profesional: JSON-LD Schema (Local SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "L'Étoile",
+      "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Gastronómica 123",
+        "addressLocality": "Madrid",
+        "addressRegion": "Comunidad de Madrid",
+        "postalCode": "28001",
+        "addressCountry": "ES"
+      },
+      "telephone": "+34600000000",
+      "servesCuisine": "Contemporánea",
+      "priceRange": "$$$$"
+    }
+    </script>
+    <meta name="description"
+        content="Experimenta la alta cocina en L'Étoile. Reserva tu mesa hoy y disfruta de una experiencia culinaria inolvidable.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Floating WhatsApp CTA con Tracking -->
+    <a href="https://wa.me/34600000000?text=Hola,%20me%20gustar%C3%ADa%20hacer%20una%20reserva"
+        class="whatsapp-float track-whatsapp" target="_blank" rel="noopener noreferrer"
+        aria-label="Reservar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="#" class="logo">L'Étoile</a>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Inicio</a></li>
+                    <li class="nav__item"><a href="#menu" class="nav__link">Menú</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Nosotros</a></li>
+                    <li class="nav__item"><a href="#gallery" class="nav__link">Experiencia</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <button class="lang-toggle" aria-label="Cambiar idioma">EN</button>
+                <a href="#reservations" class="btn btn--primary btn--sm hidden-mobile track-reserva">Reservar Mesa</a>
+                <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+        <button class="menu-close" aria-label="Cerrar menú">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item" style="margin-bottom: 1rem;"><button class="lang-toggle mobile-lang" aria-label="Cambiar idioma">EN</button></li>
+            <li class="mobile-nav__item"><a href="#home" class="mobile-nav__link">Inicio</a></li>
+            <li class="mobile-nav__item"><a href="#menu" class="mobile-nav__link">Menú</a></li>
+            <li class="mobile-nav__item"><a href="#about" class="mobile-nav__link">Nosotros</a></li>
+            <li class="mobile-nav__item"><a href="#gallery" class="mobile-nav__link">Experiencia</a></li>
+            <li class="mobile-nav__item"><a href="#reservations"
+                    class="btn btn--primary btn--full mt-2 track-reserva">Reservar Mesa</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero__bg-image"></div>
+        <div class="hero__overlay"></div>
+        <div class="container hero__container">
+            <div class="hero__content reveal">
+                <span class="hero__subtitle">Alta Gastronomía</span>
+                <h1 class="hero__title">Un viaje extraordinario<br>para tus sentidos</h1>
+                <p class="hero__text">Descubre la fusión perfecta entre la cocina de autor y una atmósfera inolvidable
+                    en el corazón de la ciudad.</p>
+
+                <!-- CRO: Trust Badges y Oferta -->
+                <div class="hero__trust-badges">
+                    <span><i class="fas fa-star text-primary"></i> 4.9/5 Reseñas</span>
+                    <span><i class="fas fa-check-circle text-primary"></i> +500 Clientes</span>
+                </div>
+                <div class="hero__offer">
+                    <p>🎁 <strong>Reserva hoy y recibe una copa de bienvenida</strong></p>
+                    <small>⚠️ Solo 10 mesas disponibles por noche</small>
+                </div>
+
+                <div class="hero__cta-group">
+                    <a href="#reservations" class="btn btn--primary btn--lg track-reserva">Reservar mi mesa ahora</a>
+                    <a href="#menu" class="btn btn--outline btn--lg text-white">Ver Menú</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator fade-in">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Featured Menu Section -->
+    <section class="section menu" id="menu">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-subtitle">Nuestra Selección</span>
+                <h2 class="section-title">Menú Destacado</h2>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Dish 1 -->
+                <div class="menu-card reveal">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Medallones de Filet Mignon" loading="lazy">
+                        <div class="menu-card__price">$45</div>
+                    </div>
+                    <div class="menu-card__content">
+                        <h3 class="menu-card__title">Medallones de Filet Mignon</h3>
+                        <p class="menu-card__desc">Corte premium acompañado de puré de trufas, espárragos asados y
+                            reducción de vino tinto.</p>
+                    </div>
+                </div>
+
+                <!-- Dish 2 -->
+                <div class="menu-card reveal reveal--delay-1">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Salmón Glaseado" loading="lazy">
+                        <div class="menu-card__price">$38</div>
+                    </div>
+                    <div class="menu-card__content">
+                        <h3 class="menu-card__title">Salmón Glaseado al Miso</h3>
+                        <p class="menu-card__desc">Salmón fresco con costra de sésamo, servido sobre wok de vegetales
+                            orgánicos crujientes.</p>
+                    </div>
+                </div>
+
+                <!-- Dish 3 -->
+                <div class="menu-card reveal reveal--delay-2">
+                    <div class="menu-card__image">
+                        <img src="https://images.unsplash.com/photo-1600803907087-f56d462fd26b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Risotto de Setas Silvestres" loading="lazy">
+                        <div class="menu-card__price">$32</div>
+                    </div>
+                    <div class="menu-card__content">
+                        <h3 class="menu-card__title">Risotto de Setas Silvestres</h3>
+                        <p class="menu-card__desc">Arroz arborio cremoso con variedad de setas de temporada, parmesano
+                            reggiano y aceite de trufa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4 reveal">
+                <a href="#menu" class="btn btn--outline">Ver Carta Completa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container about__container">
+            <div class="about__image reveal">
+                <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                    alt="Chef preparando plato" loading="lazy">
+                <div class="about__badge">
+                    <span class="about__years">15</span>
+                    <span class="about__text">Años de<br>Excelencia</span>
+                </div>
+            </div>
+
+            <div class="about__content reveal reveal--delay-1">
+                <span class="section-subtitle">Nuestra Historia</span>
+                <h2 class="section-title">Pasión y Tradición en Cada Detalle</h2>
+                <p class="about__desc">Fundado en 2008, L'Étoile nació de la visión del Chef Jean Paul por crear un
+                    espacio donde la técnica culinaria impecable se encontrara con los mejores ingredientes locales y de
+                    temporada.</p>
+
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-leaf feature__icon"></i>
+                        <div>
+                            <h4 class="feature__title">Ingredientes Locales</h4>
+                            <p class="feature__desc">Trabajamos directamente con agricultores de la región asegurando
+                                frescura absoluta.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-award feature__icon"></i>
+                        <div>
+                            <h4 class="feature__title">Calidad Premiada</h4>
+                            <p class="feature__desc">Reconocidos consecutivamente por guías gastronómicas de prestigio
+                                internacional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery" id="gallery">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-subtitle">Atmósfera</span>
+                <h2 class="section-title">La Experiencia L'Étoile</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item item-1 reveal">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Interior Restaurante" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item item-2 reveal reveal--delay-1">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Mesa servida" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item item-3 reveal reveal--delay-2">
+                    <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Chef cocinando" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item item-4 reveal reveal--delay-3">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Postre" loading="lazy">
+                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="testimonials__overlay"></div>
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <span class="section-subtitle text-white">Testimonios</span>
+                <h2 class="section-title text-white title-center">Lo que dicen nuestros clientes</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-card__text">"Una experiencia absolutamente sublime. Cada plato estaba
+                        perfectamente ejecutado. El ambiente es íntimo y elegante."</p>
+                    <div class="testimonial-card__author">
+                        <div class="author-avatar">AM</div>
+                        <div class="author-info">
+                            <h4>Ana Martínez</h4>
+                            <span>Guía Gastronómica</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal reveal--delay-1">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-card__text">"Celebramos nuestro aniversario aquí y fue inolvidable. El
+                        servicio es impecable y el risotto de setas es de otro mundo."</p>
+                    <div class="testimonial-card__author">
+                        <div class="author-avatar">CG</div>
+                        <div class="author-info">
+                            <h4>Carlos Gómez</h4>
+                            <span>Cliente Frecuente</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal reveal--delay-2">
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-card__text">"La carta de vinos es excepcional y marida perfectamente con la
+                        propuesta del chef. Totalmente recomendado."</p>
+                    <div class="testimonial-card__author">
+                        <div class="author-avatar">LR</div>
+                        <div class="author-info">
+                            <h4>Laura Rodríguez</h4>
+                            <span>Crítica de Vinos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservations & Location Section -->
+    <section class="section reservations" id="reservations">
+        <div class="container">
+            <div class="booking-container reveal">
+                <div class="booking-form-wrapper">
+                    <div class="section-header">
+                        <span class="section-subtitle">Asegura tu mesa</span>
+                        <h2 class="section-title">Haz tu Reserva</h2>
+                    </div>
+
+                    <form class="booking-form" id="bookingForm">
+                        <div class="form-group">
+                            <label for="name">Nombre Completo</label>
+                            <input type="text" id="name" placeholder="Ej. Juan Pérez" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Fecha</label>
+                                <input type="date" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Hora</label>
+                                <select id="time" required>
+                                    <option value="" disabled selected>Selecciona</option>
+                                    <option value="19:00">19:00</option>
+                                    <option value="19:30">19:30</option>
+                                    <option value="20:00">20:00</option>
+                                    <option value="20:30">20:30</option>
+                                    <option value="21:00">21:00</option>
+                                    <option value="21:30">21:30</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Número de Personas</label>
+                            <select id="guests" required>
+                                <option value="1">1 Persona</option>
+                                <option value="2" selected>2 Personas</option>
+                                <option value="3">3 Personas</option>
+                                <option value="4">4 Personas</option>
+                                <option value="5">5 Personas</option>
+                                <option value="6+">6 o más Personas</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full mt-2">Mesa Solicitada</button>
+                        <p class="form-note text-center mt-2">¿Prefieres atención inmediata? <br><a
+                                href="https://wa.me/34600000000" target="_blank"><i class="fab fa-whatsapp"></i> Reserva
+                                por WhatsApp</a></p>
+                    </form>
+                </div>
+
+                <div class="location-wrapper">
+                    <div class="location-info">
+                        <h3>Información de Contacto</h3>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-map-marker-alt"></i> Av. Gastronómica 123, 28001</li>
+                            <li><i class="fas fa-phone-alt"></i> +34 600 000 000</li>
+                            <li><i class="fas fa-envelope"></i> reservas@letoile.com</li>
+                        </ul>
+
+                        <h4 class="mt-3">Horario de Atención</h4>
+                        <ul class="hours-list">
+                            <li><span>Lun - Jue:</span> <span>19:00 - 23:30</span></li>
+                            <li><span>Vie - Sáb:</span> <span>19:00 - 00:30</span></li>
+                            <li><span>Domingo:</span> <span>Cerrado</span></li>
+                        </ul>
+                    </div>
+                    <div class="map-container">
+                        <!-- Simulated Embedded Map -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12140.407955953047!2d-3.6938927!3d40.4172449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI1JzAyLjEiTiAzwrA0MSczOC4wIlc!5e0!3m2!1ses!2ses!4v1620000000000!5m2!1ses!2ses"
+                            style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <a href="#" class="logo footer__logo">L'Étoile</a>
+                    <p class="footer__desc">Elevando el estándar de la alta cocina con ingredientes exquisitos y un
+                        servicio inigualable.</p>
+                </div>
+
+                <div class="footer__links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#menu">Menú</a></li>
+                        <li><a href="#about">Nosotros</a></li>
+                        <li><a href="#reservations">Reservas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__social">
+                    <h4>Síguenos</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; <span id="currentYear"></span> L'Étoile Restaurant. Todos los derechos reservados.</p>
+                <div class="footer__bottom-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Aviso Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
