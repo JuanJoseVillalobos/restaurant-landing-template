@@ -3,6 +3,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    let currentLang = 'es';
 
     // --- Header Scroll Effect ---
     const header = document.getElementById('header');
@@ -126,9 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const response = await fetch(`http://localhost:5000/api/menu/${itemId}`);
             if (!response.ok) throw new Error('Plato no encontrado en el servidor');
-            
+
             const item = await response.json();
-            
+
             // Render the Dynamic Detail Page
             detailWrapper.innerHTML = `
                 <div class="detail-grid reveal active">
@@ -153,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             detailWrapper.innerHTML = '<div style="text-align:center;"><h2 style="color:#ff4d4d">Error de conexión</h2><a href="index.html" class="btn btn--primary mt-2">Regresar al Inicio</a></div>';
         }
     };
-    
+
     // Ejecutar si estamos en detalle.html
     fetchAndRenderDetail();
 
@@ -161,17 +162,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const fetchAndRenderMenu = async () => {
         const menuGrid = document.querySelector('.menu-grid');
         if (!menuGrid) return;
-        
+
         try {
             // Loading State Clean UX
             menuGrid.innerHTML = '<div style="text-align:center; grid-column: 1/-1; padding: 4rem;"><i class="fas fa-circle-notch fa-spin fa-2x text-primary" style="margin-bottom:1rem;"></i><p>Preparando nuestro exquisito menú...</p></div>';
-            
+
             const response = await fetch('http://localhost:5000/api/menu');
             if (!response.ok) throw new Error('Network error');
             const menuItems = await response.json();
-            
+
             menuGrid.innerHTML = ''; // Clean Grid
-            
+
             // Render Dynamic Cards
             menuItems.forEach((item, index) => {
                 const delayClass = index === 0 ? '' : `reveal--delay-${(index % 3)}`;
@@ -185,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="menu-card__content">
                         <h3 class="menu-card__title">${item.name}</h3>
                         <p class="menu-card__desc">${item.description}</p>
-                        <a href="/detalle?id=${item._id}" class="btn btn--outline mt-2" style="font-size: 0.8rem; padding: 0.4rem 1rem;">Ver Detalles</a>
+                        <a href="/detalle?id=${item._id}" class="btn btn--outline mt-2" style="font-size: 0.8rem; padding: 0.4rem 1rem;">${currentLang === 'es' ? 'Ver Detalles' : 'View Details'}</a>
                     </div>
                 `;
                 menuGrid.appendChild(card);
@@ -236,13 +237,8 @@ document.addEventListener('DOMContentLoaded', () => {
             '.hero__cta-group .btn--outline': 'View Menu',
             '#menu .section-subtitle': 'Our Selection',
             '#menu .section-title': 'Featured Menu',
-            '.menu-card:nth-child(1) .menu-card__title': 'Filet Mignon Medallions',
-            '.menu-card:nth-child(1) .menu-card__desc': 'Premium cut accompanied by truffle puree, roasted asparagus, and red wine reduction.',
-            '.menu-card:nth-child(2) .menu-card__title': 'Miso Glazed Salmon',
-            '.menu-card:nth-child(2) .menu-card__desc': 'Fresh salmon with sesame crust, served over a wok of crispy organic vegetables.',
-            '.menu-card:nth-child(3) .menu-card__title': 'Wild Mushroom Risotto',
-            '.menu-card:nth-child(3) .menu-card__desc': 'Creamy arborio rice with a variety of seasonal mushrooms, parmigiano reggiano, and truffle oil.',
-            '#menu .btn--outline': 'View Full Menu',
+            '.menu-card .btn--outline': 'View Details',
+            '#menu .mt-4 .btn--outline': 'View Full Menu',
             '.about__text': 'Years of<br>Excellence',
             '#about .section-subtitle': 'Our History',
             '#about .section-title': 'Passion and Tradition in Every Detail',
@@ -293,14 +289,15 @@ document.addEventListener('DOMContentLoaded', () => {
             '.footer__bottom-links a:nth-child(1)': 'Privacy Policy',
             '.footer__bottom-links a:nth-child(2)': 'Legal Notice'
         },
-        es: {}
+        es: {
+            '.menu-card .btn--outline': 'Ver Detalles'
+        }
     };
 
-    let currentLang = 'es';
     const langToggles = document.querySelectorAll('.lang-toggle');
-    
-    if (Object.keys(translations.es).length === 0) {
-        for (let selector in translations.en) {
+
+    for (let selector in translations.en) {
+        if (!translations.es[selector]) {
             const el = document.querySelector(selector);
             if (el) translations.es[selector] = el.innerHTML;
         }
@@ -310,10 +307,12 @@ document.addEventListener('DOMContentLoaded', () => {
         currentLang = lang;
         const dict = translations[lang];
         for (let selector in dict) {
-            const el = document.querySelector(selector);
-            if (el) el.innerHTML = dict[selector];
+            const els = document.querySelectorAll(selector);
+            els.forEach(el => el.innerHTML = dict[selector]);
         }
-        langToggles.forEach(btn => btn.textContent = lang === 'es' ? 'EN' : 'ES');
+        langToggles.forEach(btn => {
+            btn.innerHTML = `<img src="icons/icon-${lang}.png" alt="${lang.toUpperCase()}" class="lang-icon">`;
+        });
         document.documentElement.lang = lang;
         const yearSpan = document.getElementById('currentYear');
         if (yearSpan) yearSpan.textContent = new Date().getFullYear();
