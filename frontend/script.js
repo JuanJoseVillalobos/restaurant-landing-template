@@ -17,17 +17,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Mobile Menu Toggle ---
     const menuToggle = document.querySelector('.menu-toggle');
-    const menuClose = document.querySelector('.menu-close');
     const mobileNav = document.getElementById('mobile-nav');
     const mobileLinks = document.querySelectorAll('.mobile-nav__link');
 
     function toggleMenu() {
         mobileNav.classList.toggle('active');
+        if (menuToggle) menuToggle.classList.toggle('active');
+        const header = document.getElementById('header');
+        if (header) header.classList.toggle('nav-active');
         document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
     }
 
     if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
-    if (menuClose) menuClose.addEventListener('click', toggleMenu);
 
     // Close mobile menu when a link is clicked
     mobileLinks.forEach(link => {
