@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Étoile | Detalle del Plato</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .detail-container {
+            padding: 150px 0 100px;
+            min-height: 80vh;
+        }
+        .detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .detail-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.3s ease;
+        }
+        .detail-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .detail-price {
+            font-size: 2rem;
+            color: var(--primary-color);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .detail-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        .detail-category {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 768px) {
+            .detail-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .detail-content h1 { font-size: 2.5rem; }
+            .detail-container { padding: 120px 0 60px; }
+        }
+        @media (prefers-color-scheme: dark) {
+            .detail-description { color: #aaaaaa; }
+            .detail-content h1 { color: #e0e0e0; }
+            .detail-category { background-color: var(--primary-color); color: var(--secondary-color); font-weight: bold;}
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Mínimo -->
+    <header class="header scrolled" id="header" style="background-color: var(--secondary-color);">
+        <div class="container header__container">
+            <a href="index.html" class="logo" style="color: var(--white);">L'Étoile</a>
+            <div class="header__actions">
+                <a href="index.html" class="btn btn--outline btn--sm text-white"><i class="fas fa-arrow-left"></i> Volver al Menú</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="detail-container container" id="detail-wrapper">
+        <div style="text-align:center; padding: 4rem;">
+            <i class="fas fa-circle-notch fa-spin fa-3x text-primary" style="margin-bottom:1rem;"></i>
+            <p style="font-family: var(--font-heading); font-size: 1.5rem;">Preparando los detalles de tu plato...</p>
+        </div>
+    </main>
+
+    <!-- Footer Mínimo -->
+    <footer class="footer" style="padding: 2rem 0; text-align: center;">
+        <div class="container">
+            <a href="index.html" class="logo footer__logo">L'Étoile</a>
+            <p>&copy; <span id="currentYear"></span> L'Étoile Restaurant.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
