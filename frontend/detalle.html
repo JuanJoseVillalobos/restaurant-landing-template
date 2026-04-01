@@ -12,62 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-    <style>
-        .detail-container {
-            padding: 150px 0 100px;
-            min-height: 80vh;
-        }
-        .detail-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        .detail-image img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: var(--shadow-lg);
-            transition: transform 0.3s ease;
-        }
-        .detail-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .detail-price {
-            font-size: 2rem;
-            color: var(--primary-color);
-            font-family: var(--font-heading);
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-        .detail-description {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-        }
-        .detail-category {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: var(--white);
-            padding: 0.3rem 1rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-        }
-        @media (max-width: 768px) {
-            .detail-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .detail-content h1 { font-size: 2.5rem; }
-            .detail-container { padding: 120px 0 60px; }
-        }
-        @media (prefers-color-scheme: dark) {
-            .detail-description { color: #aaaaaa; }
-            .detail-content h1 { color: #e0e0e0; }
-            .detail-category { background-color: var(--primary-color); color: var(--secondary-color); font-weight: bold;}
-        }
-    </style>
+    <link rel="stylesheet" href="detalle.css">
 </head>
 <body>
     <!-- Header Mínimo -->
@@ -96,5 +41,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="detalle.js"></script>
 </body>
 </html>
