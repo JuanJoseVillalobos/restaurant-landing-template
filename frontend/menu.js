@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="menu-card__content">
                         <h3 class="menu-card__title">${item.name}</h3>
                         <p class="menu-card__desc">${item.description}</p>
-                        <a href="/detalle.html?id=${item._id}" class="btn btn--outline mt-2" style="font-size: 0.8rem; padding: 0.4rem 1rem;">Ver Detalles</a>
+                        <a href="/detalle?id=${item._id}" class="btn btn--outline mt-2" style="font-size: 0.8rem; padding: 0.4rem 1rem;">Ver Detalles</a>
                     </div>
                 `;
                 menuGrid.appendChild(card);
