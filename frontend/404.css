@@ -1,0 +1,88 @@
+/* ========================================= */
+/* L'Étoile - 404 Error Page Styles          */
+/* ========================================= */
+
+.error-page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.error-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 130px 0 80px;
+}
+
+.error-card {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3.5rem 2.5rem;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  border-radius: 6px;
+}
+
+.error-code {
+  font-family: var(--font-heading);
+  font-size: clamp(5rem, 14vw, 8rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--primary-color);
+  letter-spacing: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.error-divider {
+  width: 60px;
+  height: 2px;
+  background-color: var(--primary-color);
+  margin: 0 auto 1.75rem;
+}
+
+.error-title {
+  font-size: clamp(1.85rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+.error-text {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 2.25rem;
+}
+
+.error-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.error-actions .btn:focus-visible,
+.header a:focus-visible,
+.footer a:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .error-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .error-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .error-actions .btn {
+    width: 100%;
+  }
+}
+

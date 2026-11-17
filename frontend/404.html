@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página no encontrada (404) | L'Étoile</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS (root-relative so nested 404 paths still load assets) -->
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/404.css">
+</head>
+<body class="error-page">
+    <!-- Header -->
+    <header class="header scrolled" id="header" style="background-color: var(--secondary-color);">
+        <div class="container header__container">
+            <a href="/" class="logo" style="color: var(--white);">L'Étoile</a>
+            <nav class="header__actions" aria-label="Navegación de error">
+                <a href="/" class="btn btn--outline btn--sm text-white">
+                    <i class="fas fa-arrow-left" aria-hidden="true"></i> Volver al Inicio
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main 404 Content -->
+    <main class="error-main">
+        <div class="container">
+            <div class="error-card">
+                <span class="section-subtitle">Error 404</span>
+                <p class="error-code" aria-hidden="true">404</p>
+                <div class="error-divider" aria-hidden="true"></div>
+                <h1 class="error-title">Fuera de nuestra carta</h1>
+                <p class="error-text">
+                    Lo sentimos, la página que estás buscando no existe o fue movida.
+                    Te invitamos a regresar al inicio o descubrir nuestras especialidades del día.
+                </p>
+                <div class="error-actions">
+                    <a href="/" class="btn btn--primary">
+                        <i class="fas fa-home" aria-hidden="true"></i> Volver al Inicio
+                    </a>
+                    <a href="/menu" class="btn btn--outline">
+                        <i class="fas fa-utensils" aria-hidden="true"></i> Ver la Carta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="padding: 2rem 0; text-align: center;">
+        <div class="container">
+            <a href="/" class="logo footer__logo">L'Étoile</a>
+            <p>&copy; <span id="currentYear">2026</span> L'Étoile Restaurant. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const yearSpan = document.getElementById('currentYear');
+        if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
