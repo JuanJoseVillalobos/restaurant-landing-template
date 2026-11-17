@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Étoile | Nuestra Historia</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-page-header {
+            padding: 150px 0 80px;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+        }
+        .about-page-header h1 {
+            color: var(--primary-color);
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .about-page-header p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+        }
+        .about-content-section {
+            padding: 80px 0;
+        }
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 6rem;
+        }
+        .history-grid:nth-child(even) .history-text {
+            order: 2;
+        }
+        .history-grid:nth-child(even) .history-image {
+            order: 1;
+        }
+        .history-image img {
+            border-radius: 4px;
+            box-shadow: var(--shadow-lg);
+            width: 100%;
+        }
+        .history-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .history-text p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .history-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                margin-bottom: 4rem;
+            }
+            .history-grid:nth-child(even) .history-text { order: 1; }
+            .history-grid:nth-child(even) .history-image { order: 2; }
+            .about-page-header h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header scrolled" id="header" style="background-color: var(--secondary-color);">
+        <div class="container header__container">
+            <a href="index.html" class="logo" style="color: var(--white);">L'Étoile</a>
+            <div class="header__actions">
+                <a href="index.html" class="btn btn--outline btn--sm text-white"><i class="fas fa-arrow-left"></i> Regresar al Inicio</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="about-page-header">
+        <div class="container">
+            <h1>Nuestra Historia</h1>
+            <p>La búsqueda constante de la perfección culinaria, el respeto por el origen y la pasión por el buen servicio.</p>
+        </div>
+    </div>
+
+    <main class="about-content-section">
+        <div class="container">
+            <!-- Bloque 1 -->
+            <div class="history-grid reveal">
+                <div class="history-text">
+                    <h2>El Comienzo (2008)</h2>
+                    <p>Fundado en 2008, L'Étoile nació de la visión del Chef Jean Paul por crear un espacio donde la técnica culinaria impecable se encontrara con los mejores ingredientes locales. Tras recorrer las mejores cocinas de París y San Sebastián, Jean Paul volvió a sus raíces con una meta clara: reescribir la alta montaña y el mar en un solo menú.</p>
+                    <p>Cuidando cada detalle arquitectónico y sonoro del local, el restaurante abrió sus puertas y rápidamente capturó la atención de los críticos más duros de la ciudad.</p>
+                </div>
+                <div class="history-image">
+                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Chef Jean Paul en sus inicios" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Bloque 2 -->
+            <div class="history-grid reveal">
+                <div class="history-text">
+                    <h2>Filosofía Farm-to-Table</h2>
+                    <p>En L'Étoile no creemos en atajos. Trabajamos directamente con una red de catorce agricultores orgánicos de la región, pescadores artesanales y ganaderos que comparten nuestra ética de sustentabilidad.</p>
+                    <p>Nuestros menús mutan con las estaciones, adaptándose estrictamente a lo que la tierra tiene para ofrecernos en su mejor momento. Esta conexión directa garantiza una frescura insuperable en tu mesa.</p>
+                </div>
+                <div class="history-image">
+                    <img src="https://images.unsplash.com/photo-1600803907087-f56d462fd26b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Ingredientes frescos" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Bloque 3 -->
+            <div class="history-grid reveal">
+                <div class="history-text">
+                    <h2>Compromiso y Excelencia</h2>
+                    <p>Hemos sido reconocidos consecutivamente por múltiples guías gastronómicas de prestigio internacional, pero nuestro mayor galardón son las caras de asombro de nuestros comensales.</p>
+                    <p>Nuestra extensa cava, curada por nuestra Master Sommelier Clara, alberga más de 500 referencias diseñadas para hacer un maridaje perfecto con las obras de arte que salen de nuestras cocinas.</p>
+                </div>
+                <div class="history-image">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Vista interior cava y mesas" loading="lazy">
+                </div>
+            </div>
+            
+            <div class="text-center mt-4 reveal">
+                <h3 style="margin-bottom: 1.5rem; font-size: 2rem;">¿Listo para vivir la experiencia?</h3>
+                <a href="index.html#reservations" class="btn btn--primary btn--lg">Reservar tu Mesa</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" style="padding: 2rem 0; text-align: center;">
+        <div class="container">
+            <a href="index.html" class="logo footer__logo">L'Étoile</a>
+            <p>&copy; <span id="currentYear"></span> L'Étoile Restaurant. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

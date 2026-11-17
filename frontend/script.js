@@ -122,14 +122,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Loading State Clean UX
             menuGrid.innerHTML = '<div style="text-align:center; grid-column: 1/-1; padding: 4rem;"><i class="fas fa-circle-notch fa-spin fa-2x text-primary" style="margin-bottom:1rem;"></i><p>Preparando nuestro exquisito menú...</p></div>';
 
-            const response = await fetch('http://localhost:5000/api/menu');
+            const response = await fetch('https://restaurant-landing-template.onrender.com/api/menu');
             if (!response.ok) throw new Error('Network error');
             const menuItems = await response.json();
 
             menuGrid.innerHTML = ''; // Clean Grid
 
             // Render Dynamic Cards
-            menuItems.forEach((item, index) => {
+            // Solo mostramos 3 platos destacados en el home
+            menuItems.slice(0, 3).forEach((item, index) => {
                 const delayClass = index === 0 ? '' : `reveal--delay-${(index % 3)}`;
                 const card = document.createElement('div');
                 card.className = `menu-card reveal ${delayClass} active`;

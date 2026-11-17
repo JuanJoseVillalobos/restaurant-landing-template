@@ -78,6 +78,6 @@
 
 @media (prefers-color-scheme: dark) {
     .detail-description { color: #aaaaaa; }
-    .detail-content h1 { color: #e0e0e0; }
+    .detail-content h1 { color: #000000; }
     .detail-category { background-color: var(--primary-color); color: var(--secondary-color); font-weight: bold;}
 }

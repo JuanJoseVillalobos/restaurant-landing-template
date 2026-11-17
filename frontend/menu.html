@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Étoile | Menú Completo</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header scrolled" id="header" style="background-color: var(--secondary-color);">
+        <div class="container header__container">
+            <a href="index.html" class="logo" style="color: var(--white);">L'Étoile</a>
+            <div class="header__actions">
+                <a href="index.html" class="btn btn--outline btn--sm text-white"><i class="fas fa-arrow-left"></i> Regresar al Inicio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section class="section menu" id="full-menu" style="padding-top: 150px; min-height: 80vh;">
+        <div class="container">
+            <div class="section-header text-center reveal active">
+                <span class="section-subtitle">Nuestra Selección Completa</span>
+                <h2 class="section-title">La Carta L'Étoile</h2>
+            </div>
+            
+            <div class="menu-grid" id="full-menu-grid">
+                <div style="text-align:center; grid-column: 1/-1; padding: 4rem;">
+                    <i class="fas fa-circle-notch fa-spin fa-2x text-primary" style="margin-bottom:1rem;"></i>
+                    <p>Preparando nuestro exquisito menú...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="padding: 2rem 0; text-align: center;">
+        <div class="container">
+            <a href="index.html" class="logo footer__logo">L'Étoile</a>
+            <p>&copy; <span id="currentYear"></span> L'Étoile Restaurant. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+</html>
